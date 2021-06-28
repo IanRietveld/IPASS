@@ -28,7 +28,7 @@ This library is developed to be used with the <a href="https://www.arduino.cc/en
 
 | Name                 | Student number | Username       |
 | -------------------- | -------------  | -------------- |
-| Ian Rietveld         | 1789386        | IanRietveld    |
+| Ian Rietveld         | 1758411        | IanRietveld    |
 </table>
 
 
