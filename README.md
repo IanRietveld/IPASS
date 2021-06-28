@@ -1,33 +1,28 @@
 <h1>IPASS - DHT11</h1>
 
 <h2>Introduction</h2>
-This repository is created for the final project of this propeadeutic year. The project is called IPASS.
+This repository has been created for the final project of my propaedeutic year.
 <br>
-<br>The goal of this project is to write a library for a hardware component of my choice,
-and write this library using the OOP ways that I have learned this period.
-I had to use my self-made library to communicate with the hardware.
+<br>The main goal of this project has been to write a library for a hardware component of choice, and to do this following
+the object oriented ways we've been thought during this last semester.
+
 <br>
-<br>I have also created a tic-tac-toe game with physical buttons that can be used by two players.
-Buttons 1 to 9 are each linked to a specific coordinate in the grid.
-After pressing one of the buttons on the keypad, a circle will be drawn at the corresponding coordinate in the grid.
-Using this game, I can demonstrate my library for the OLED.
+<br>The product I've created is basically a little humidity / temperature sensor which I'm able to use when keeping track of my reptiles living enviroment needs. Which in my case, is very important to keep in check since I'm working with endangered species that need very specific temperatures and humidity all day.
 
 <h2>Included libraries</h2>
 This library uses <a href="https://github.com/wovo/hwlib">hwlib and bmptk</a>.
 
 <h2>Used hardware</h2>
-This library is developed to be used with the <a href="https://www.arduino.cc/en/Main/ArduinoBoardDue">Arduino Due</a>
-
-I chose the <a href="https://bit.ly/3zVqiJX">SSD1331</a> driver that is combined with an RGB OLED screen.
-
-I also used two of the <a href="https://bit.ly/3h0HOFr">foil 4x4 matrix keypads</a>
+This library is developed to be used with the <a href="https://www.arduino.cc/en/Main/ArduinoBoardDue">Arduino Due.</a>
+<br>
+Sensor I used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/dht11.html">DHT11 sensor.</a>
 
 <h2>Author</h2>
 <table style="width:100%">
 
 | Name                 | Student number | Username       |
-| -------------------- | ------------- | -------------- |
-| Kenny van Doorn      | 1789386       | Kennyvandoorn  |
+| -------------------- | -------------  | -------------- |
+| Ian Rietveld         | 1789386        | IanRietveld    |
 </table>
 
 
@@ -51,14 +46,10 @@ I also used two of the <a href="https://bit.ly/3h0HOFr">foil 4x4 matrix keypads<
 1. Make sure you have downloaded and included <a href="https://github.com/wovo/hwlib">hwlib</a> into your project. 
 <br>2. Build using the included makefile, or run the run.bat file from your terminal.
 
-<h2>Extra notes</h2>
-The included main.cpp shows you how to create pins and objects.
-You can use the predefined variables to test the OLED and key matrix.
-The predefined variables allow players to start and play a game of Tic-Tac-Due!
 
 <h2>License</h2>
 
-Copyright © Kenny van Doorn (kenny.vandoorn@student.hu.nl), 2021
+Copyright © Ian Rietveld (ian.rietveld@student.hu.nl), 2021
 
 Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE or copy at http://www.boost.org/LICENSE_1_0.txt)
 
