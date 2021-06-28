@@ -115,18 +115,26 @@ int main()
 
     // ----------------------------------------------------------
 
-	if(dht11.temperature <= 30 && dht11.temperature >= 20)
+	
                                                              // Temperature has to be in set range for specific animal needs, 
                                                              // if temp within positive range a green LED will turn on. 
-                                                             // If this is not the case, a red LED will turn on. 
-        {
-	    scl_green_led.write(1);
-        relais.write(1);
+                                                             // If this is not the case, a red LED will turn on.
+	    						     // **This is also where u can set the temperature or humidity conditions
+	    						     //   for the "relais"**
+	if(dht11.temperature <= 30 && dht11.temperature >= 20)
+	{
+		scl_green_led.write(1);
+        	relais.write(1);
         } 
-        else
+	    
+        else if(dht11.temperature < 20)
+	{
+		relais.write(1);
+	}
+	else
         {
-	    scl_red_led.write(1);
-        relais.write(0);
+	  	scl_red_led.write(1);
+        	relais.write(0);
         }
 
     hwlib::cout << "Current humidity = " << dht11.humidity << "%" << hwlib::endl;
