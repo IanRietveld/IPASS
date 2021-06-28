@@ -15,10 +15,10 @@ It's been such a pain to make the code as compact and understandable as possible
 <h2>Included libraries</h2>
 This library uses <a href="https://github.com/wovo/hwlib">hwlib and bmptk</a>.
 
-<h2>Used hardware</h2>
+<h2>Hardware</h2>
 This library is developed to be used with the <a href="https://www.arduino.cc/en/Main/ArduinoBoardDue">Arduino Due.</a>
 <br>
-Sensor I used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/dht11.html">DHT11 sensor.</a>
+<br>Sensor I used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/dht11.html">DHT11 sensor.</a>
 
 <h2>Author</h2>
 <table style="width:100%">
