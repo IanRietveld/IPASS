@@ -7,7 +7,9 @@ This repository has been created for the final project of my propaedeutic year o
 the object oriented ways we've been thought during this last semester.
 
 <br>
-<br>The product I've created is basically a little humidity / temperature sensor which I'm able to use when keeping track of my reptiles living enviroment needs on an Oled display. Which in my case, is very important to keep in check since I'm working with endangered species that need very specific temperatures and humidity all day.
+<br>The product I've created is basically a little humidity / temperature sensor which I'm able to use when keeping track of my reptiles living enviroment needs on an Oled display. Which in my case, is very important to keep in check since I'm working with endangered species that need very specific temperatures and humidity all day. 
+<br>
+<br>To maintain the correct temperature a "relais" can be added between the arduino and an external lighting fixture with a proper heating light bulb. This relais is programmed to turn off the heating bulb when the temperature exceeds the set values. 
 
 <br> 
 <br>It's been such a pain to make the code as compact and understandable as possible, so I'm hoping that students who'd want to use this library next year for their own project will not have such a hard time implementing this code. 
@@ -19,6 +21,9 @@ This library uses <a href="https://github.com/wovo/hwlib">hwlib and bmptk</a>.
 This library is developed to be used with the <a href="https://www.arduino.cc/en/Main/ArduinoBoardDue">Arduino Due.</a>
 <br>
 <br>Sensor I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/dht11.html">DHT11 sensor.</a>
+
+<br>
+<br>Oled display I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/oled-1.html">Oled.</a>
 
 <br>
 <br>Oled display I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/oled-1.html">Oled.</a>
