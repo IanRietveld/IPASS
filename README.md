@@ -31,7 +31,7 @@ Sensor I used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab
 
 <h2>Installation</h2>
 
-<pre style="position: relative;" lang="git"><code>git clone https://github.com/Kennyvandoorn/IPASS-Tic-Tac-Due-SSD1331.git</code></pre>
+<pre style="position: relative;" lang="git"><code>git clone https://github.com/IanRietveld/IPASS.git </code></pre>
 <div class="zeroclipboard-container position-absolute right-0 top-0">
     <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/Kennyvandoorn/IPASS-Tic-Tac-Due-SSD1331.git
 " tabindex="0" role="button">
