@@ -17,17 +17,17 @@ public:
     dht11(hwlib::pin_oc& pin)
         : pin(pin)
     {
-		pin.write(1); 			// Datasheet states that we need to send a start signal. 
+	pin.write(1); 						// Datasheet states that we need to send a start signal. 
     }
 								/// \brief
-    						 	/// Function to read one byte from DHT11.
+    						 		/// Function to read one byte from DHT11.
 								/// \details
 								/// This functions purpose is to read one byte from the sensor
 								/// and saving it into the result variabel, details are described in commentary.
 	uint8_t read_dht11_byte() 
     {
 	
-	uint8_t result = 0;			// Variable for saving byte of data.
+	uint8_t result = 0;					// Variable for saving byte of data.
 
 	for(unsigned int i = 0; i < 8; i++) {
 
@@ -38,7 +38,7 @@ public:
 
 	    result <<= 1; 			
  
-	    if(pin.read())			// If pin is still '1' after 30us.
+	    if(pin.read())		// If pin is still '1' after 30us.
 
 			result |= 1; 		
 
@@ -49,10 +49,10 @@ public:
 						/// \brief 
 						///	Read five bytes send by the sensor.
 						/// \details 
-    					/// Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and 
+    						/// Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and 
 						/// third (integral T data) byte contain data which are stored for later usage.  
-    					/// If the high pulse is ~28 microseconds then it's a 0 and if it's ~70 microseconds
-    					/// then it's a 1. (This can be visualized by using a logic analyzer.)
+    						/// If the high pulse is ~28 microseconds then it's a 0 and if it's ~70 microseconds
+    						/// then it's a 1. (This can be visualized by using a logic analyzer.)
 	void get_data(){
 
 	pin.write(0); 		
@@ -62,10 +62,10 @@ public:
 	hwlib::wait_us(60);
 
 						// First expect a low signal for ~80 microseconds followed by a high signal
-    					// for ~80 microseconds again.
+    						// for ~80 microseconds again.
 
 	if(pin.read()) {
-	    				// Wait for first response: Low.
+	    					// Wait for first response: Low.
 	    return;
 	}
 	hwlib::wait_us(80);
@@ -75,7 +75,7 @@ public:
 	    return;
 	}
 
-	hwlib::wait_us(80); // After 80us wait, ready for data reception.
+	hwlib::wait_us(80); 			// After 80us wait, ready for data reception.
 
 	for(unsigned int i = 0; i < 5; i++)
 	{
