@@ -1,4 +1,5 @@
 #include "hwlib.hpp"
+/// @file 
 
 class dht11
 {
@@ -8,16 +9,22 @@ private:
 
 public:
 								// Public variables to store specific sensor data.
-    int humidity;
+    int humidity;				
     int temperature;			
-
+								/// \brief
+								/// Constructor that creates an DHT11 instance, from an open collector pin.
+								
     dht11(hwlib::pin_oc& pin)
         : pin(pin)
     {
 		pin.write(1); 			// Datasheet states that we need to send a start signal. 
     }
-
-    uint8_t read_dht11_byte() 	// Function to read one byte from DHT11.
+								/// \brief
+    						 	/// Function to read one byte from DHT11.
+								/// \details
+								/// This functions purpose is to read one byte from the sensor
+								/// and saving it into the result variabel, details are described in commentary.
+	uint8_t read_dht11_byte() 
     {
 	
 	uint8_t result = 0;			// Variable for saving byte of data.
@@ -29,29 +36,30 @@ public:
 
 	    hwlib::wait_us(30); 	// Datasheet states we need to wait between 20-40 us, 30us to be safe.
 
-	    result <<= 1; 			// Shift bits one space (left).
+	    result <<= 1; 			
  
 	    if(pin.read())			// If pin is still '1' after 30us.
 
-			result |= 1; 		// Make lowest bit '1'.
+			result |= 1; 		
 
 	    while(pin.read()); 		// Wait for pin to be '0'.
 	}
-	return result; 				// Return result.
+	return result; 				
     }
 
 
+						/// \brief 
+						///	Read five bytes send by the sensor.
+						/// \details 
+    					/// Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and 
+						/// third (integral T data) byte contain data which are stored for later usage.  
+    					/// If the high pulse is ~28 microseconds then it's a 0 and if it's ~70 microseconds
+    					/// then it's a 1. (This can be visualized by using a logic analyzer.)
+	void get_data(){
 
-    void get_data(){	// Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and 
-						// third (integral T data) byte contain data which are stored for later usage.  
-    					// If the high pulse is ~28 microseconds then it's a 0 and if it's ~70 microseconds
-    					// then it's a 1. (This can be visualized by using a logic analyzer.)
-
-	pin.write(0); 		// Pull down pin for 25ms.
-	
+	pin.write(0); 		
 	hwlib::wait_ms(25);
-	
-	pin.write(1); 		// Pull down pin for 60us. 
+	pin.write(1); 		
 	
 	hwlib::wait_us(60);
 

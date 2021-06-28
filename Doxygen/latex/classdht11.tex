@@ -4,14 +4,12 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classdht11_a9d4c6243f3c552edb8ae306e900ae3c8}\label{classdht11_a9d4c6243f3c552edb8ae306e900ae3c8}} 
-{\bfseries dht11} (hwlib\+::pin\+\_\+oc \&pin)
-\item 
-\mbox{\Hypertarget{classdht11_a6a15bf65b7739007d507633daed4dce3}\label{classdht11_a6a15bf65b7739007d507633daed4dce3}} 
-uint8\+\_\+t {\bfseries read\+\_\+dht11\+\_\+byte} ()
-\item 
-\mbox{\Hypertarget{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}\label{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}} 
-void {\bfseries get\+\_\+data} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classdht11_a9d4c6243f3c552edb8ae306e900ae3c8}{dht11}} (hwlib\+::pin\+\_\+oc \&pin)
+\begin{DoxyCompactList}\small\item\em Constructor that creates an DHT11 instance, from an open collector pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classdht11_a6a15bf65b7739007d507633daed4dce3}{read\+\_\+dht11\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Function to read one byte from DHT11. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}{get\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Read five bytes send by the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,6 +21,30 @@ int {\bfseries temperature}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}\label{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}} 
+\index{dht11@{dht11}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!dht11@{dht11}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily void dht11\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read five bytes send by the sensor. 
+
+Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and third (integral T data) byte contain data which are stored for later usage. ~\newline
+ If the high pulse is $\sim$28 microseconds then it\textquotesingle{}s a 0 and if it\textquotesingle{}s $\sim$70 microseconds then it\textquotesingle{}s a 1. (This can be visualized by using a logic analyzer.) \mbox{\Hypertarget{classdht11_a6a15bf65b7739007d507633daed4dce3}\label{classdht11_a6a15bf65b7739007d507633daed4dce3}} 
+\index{dht11@{dht11}!read\_dht11\_byte@{read\_dht11\_byte}}
+\index{read\_dht11\_byte@{read\_dht11\_byte}!dht11@{dht11}}
+\doxysubsubsection{\texorpdfstring{read\_dht11\_byte()}{read\_dht11\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t dht11\+::read\+\_\+dht11\+\_\+byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to read one byte from DHT11. 
+
+This functions purpose is to read one byte from the sensor and saving it into the result variabel, details are described in commentary. 
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-dht.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{dht_8h}{dht.\+h}}\end{DoxyCompactItemize}

@@ -73,13 +73,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d4c6243f3c552edb8ae306e900ae3c8"><td class="memItemLeft" align="right" valign="top"><a id="a9d4c6243f3c552edb8ae306e900ae3c8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dht11</b> (hwlib::pin_oc &amp;pin)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a9d4c6243f3c552edb8ae306e900ae3c8">dht11</a> (hwlib::pin_oc &amp;pin)</td></tr>
+<tr class="memdesc:a9d4c6243f3c552edb8ae306e900ae3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that creates an DHT11 instance, from an open collector pin. <br /></td></tr>
 <tr class="separator:a9d4c6243f3c552edb8ae306e900ae3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a15bf65b7739007d507633daed4dce3"><td class="memItemLeft" align="right" valign="top"><a id="a6a15bf65b7739007d507633daed4dce3"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_dht11_byte</b> ()</td></tr>
+<tr class="memitem:a6a15bf65b7739007d507633daed4dce3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a6a15bf65b7739007d507633daed4dce3">read_dht11_byte</a> ()</td></tr>
+<tr class="memdesc:a6a15bf65b7739007d507633daed4dce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to read one byte from DHT11.  <a href="classdht11.html#a6a15bf65b7739007d507633daed4dce3">More...</a><br /></td></tr>
 <tr class="separator:a6a15bf65b7739007d507633daed4dce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8294ec8e19e115fb9b24a6716f9a51df"><td class="memItemLeft" align="right" valign="top"><a id="a8294ec8e19e115fb9b24a6716f9a51df"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_data</b> ()</td></tr>
+<tr class="memitem:a8294ec8e19e115fb9b24a6716f9a51df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a8294ec8e19e115fb9b24a6716f9a51df">get_data</a> ()</td></tr>
+<tr class="memdesc:a8294ec8e19e115fb9b24a6716f9a51df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read five bytes send by the sensor.  <a href="classdht11.html#a8294ec8e19e115fb9b24a6716f9a51df">More...</a><br /></td></tr>
 <tr class="separator:a8294ec8e19e115fb9b24a6716f9a51df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -91,6 +92,64 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>humidity</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>temperature</b></td></tr>
 <tr class="separator:a2bfb1a0a72f3a63329265667293e85ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8294ec8e19e115fb9b24a6716f9a51df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8294ec8e19e115fb9b24a6716f9a51df">&#9670;&nbsp;</a></span>get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dht11::get_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read five bytes send by the sensor. </p>
+<p>Function to read the 5 bytes sent by the sensor of which the first (integral RH data) and third (integral T data) byte contain data which are stored for later usage. <br  />
+ If the high pulse is ~28 microseconds then it's a 0 and if it's ~70 microseconds then it's a 1. (This can be visualized by using a logic analyzer.) </p>
+
+</div>
+</div>
+<a id="a6a15bf65b7739007d507633daed4dce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a15bf65b7739007d507633daed4dce3">&#9670;&nbsp;</a></span>read_dht11_byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t dht11::read_dht11_byte </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to read one byte from DHT11. </p>
+<p>This functions purpose is to read one byte from the sensor and saving it into the result variabel, details are described in commentary. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="dht_8h_source.html">dht.h</a></li>
 </ul>
