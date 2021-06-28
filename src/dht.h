@@ -46,8 +46,6 @@ public:
 	}
 	return result; 				
     }
-
-
 						/// \brief 
 						///	Read five bytes send by the sensor.
 						/// \details 

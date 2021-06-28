@@ -16,6 +16,8 @@ int main()
 
     auto scl_button = hwlib::target::pin_oc(hwlib::target::pins::d7);           // Pin definition, Button.
 
+    auto relais = hwlib::target::pin_out(hwlib::target::pins::d6);              // Pin definition, Relais.
+
     auto scl_red_led = hwlib::target::pin_out(hwlib::target::pins::d5);         // Pin definition, Red LED
     auto scl_green_led = hwlib::target::pin_out(hwlib::target::pins::d4);       // Pin definition, Green LED
 
@@ -113,16 +115,20 @@ int main()
 
     // ----------------------------------------------------------
 
-	if(dht11.temperature <= 30 && dht11.temperature >= 20)   // Temperature has to be in set range for specific animal needs, 
+	if(dht11.temperature <= 30 && dht11.temperature >= 20)
+                                                             // Temperature has to be in set range for specific animal needs, 
                                                              // if temp within positive range a green LED will turn on. 
                                                              // If this is not the case, a red LED will turn on. 
+        {
 	    scl_green_led.write(1);
-	     
-        else 
-        
+        relais.write(1);
+        } 
+        else
+        {
 	    scl_red_led.write(1);
-	    
-    
+        relais.write(0);
+        }
+
     hwlib::cout << "Current humidity = " << dht11.humidity << "%" << hwlib::endl;
 
     hwlib::cout << "Current temperature = " << dht11.temperature << " degrees Celcius" << hwlib::endl;
