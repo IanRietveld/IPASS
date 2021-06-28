@@ -12,7 +12,7 @@ the object oriented ways we've been thought during this last semester.
 <br>To maintain the correct temperature a "relais" can be added between the arduino and an external lighting fixture with a proper heating light bulb. This relais is programmed to turn off the heating bulb when the temperature exceeds the set values. 
 
 <br> 
-<br>It's been such a pain to make the code as compact and understandable as possible, so I'm hoping that students who'd want to use this library next year for their own project will not have such a hard time implementing this code. 
+<br>It's been quite a pain to make the code as compact and understandable as possible since there are so many examples on the internet that aren't quite as readable for first year students, so I'm hoping that the students who'd want to use this library next year for their own project will not have such a hard time implementing this code. 
 
 <h2>Included libraries</h2>
 This library uses <a href="https://github.com/wovo/hwlib">hwlib and bmptk</a>.
@@ -26,7 +26,7 @@ This library is developed to be used with the <a href="https://www.arduino.cc/en
 <br>Oled display I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/oled-1.html">Oled.</a>
 
 <br>
-<br>Oled display I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/oled-1.html">Oled.</a>
+<br> Relais I've used for this project: <a href="https://hu-hbo-ict.gitlab.io/turing-lab/ti-lab-shop/relais%201.html>Relais.</a>
 
 <h2>Author</h2>
 <table style="width:100%">
