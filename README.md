@@ -1,7 +1,7 @@
 <h1>IPASS - DHT11</h1>
 
 <h2>Introduction</h2>
-This repository has been created for the final project of my propaedeutic year.
+This repository has been created for the final project of my propaedeutic year of technical informatics.
 <br>
 <br>The main goal of this project has been to write a library for a hardware component of choice, and to do this following
 the object oriented ways we've been thought during this last semester.
