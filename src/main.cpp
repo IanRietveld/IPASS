@@ -18,20 +18,25 @@ int main()
 
     auto relais = hwlib::target::pin_out(hwlib::target::pins::d6);              // Pin definition, Relais.
 
-    auto scl_red_led = hwlib::target::pin_out(hwlib::target::pins::d5);         // Pin definition, Red LED
-    auto scl_green_led = hwlib::target::pin_out(hwlib::target::pins::d4);       // Pin definition, Green LED
+    auto scl_red_led = hwlib::target::pin_out(hwlib::target::pins::d5);         // Pin definition, Red LED.
+    auto scl_green_led = hwlib::target::pin_out(hwlib::target::pins::d4);       // Pin definition, Green LED.
 
-    auto i2c_bus_oled = hwlib::i2c_bus_bit_banged_scl_sda(scl_oled, sda_oled);  // I2C bus, Oled
-    auto oled = hwlib::glcd_oled(i2c_bus_oled, 0x3c);                           // Oled Adress 
+    auto i2c_bus_oled = hwlib::i2c_bus_bit_banged_scl_sda(scl_oled, sda_oled);  // I2C bus, Oled.
+    auto oled = hwlib::glcd_oled(i2c_bus_oled, 0x3c);                           // Oled Adress.
 
     auto font = hwlib::font_default_8x8();                                      // Oled font, small letters.
-    auto font_big = hwlib::font_default_16x16();                                // Oled font, big letters
+    auto font_big = hwlib::font_default_16x16();                                // Oled font, big letters.
     auto display = hwlib::terminal_from(oled, font); 
 
     dht11 dht11(sda_dht);
+    dht11.set_fahrenheit(true);                                                 // If user wants Fahrenheit scale, set this function to "true".
+                                                                                // for Celsius "false".
     while(true)
     {
+        
         dht11.get_data();
+        int temperature = dht11.get_temperature();
+        const char* scale = dht11.get_temperature_scale();
             // **********************************************************
                                                                                 // Uncomment till "***" to let display switch between temperature and humidity every x seconds.
 
@@ -49,7 +54,7 @@ int main()
                     << "\n"
                     << hwlib::flush;
 
-        hwlib::wait_ms(3000);
+        hwlib::wait_ms(2000);
 
 
 	    display << "\f"
@@ -62,12 +67,14 @@ int main()
 	            << "\n"
 	            << "\n"
 	            << "\n"
-	            << "   " << dht11.temperature << " Celcius"
+	            << "   " << temperature << scale
 	            << "\n"
 	            << hwlib::flush;
-        hwlib::wait_ms(3000);
+        hwlib::wait_ms(2000);
               
 	    
+
+              
 
         // **********************************************************
 
@@ -115,19 +122,18 @@ int main()
 
     // ----------------------------------------------------------
 
-	
-                                                             // Temperature has to be in set range for specific animal needs, 
-                                                             // if temp within positive range a green LED will turn on. 
-                                                             // If this is not the case, a red LED will turn on.
-	    						     // **This is also where u can set the temperature or humidity conditions
-	    						     //   for the "relais"**
-	if(dht11.temperature <= 30 && dht11.temperature >= 20)
+                                                                // Temperature has to be in set range for specific animal needs, 
+                                                                // if temp within positive range a green LED will turn on. 
+                                                                // If this is not the case, a red LED will turn on.
+	    						                                // **This is also where u can set the temperature or humidity conditions
+	    						                                //   for the "relais"**
+    if(dht11.temperature_c <= 30 && dht11.temperature_c >= 20)
 	{
 		scl_green_led.write(1);
         	relais.write(1);
         } 
 	    
-        else if(dht11.temperature < 20)
+        else if(dht11.temperature_c < 20)
 	{
 		relais.write(1);
 	}
@@ -137,11 +143,12 @@ int main()
         	relais.write(0);
         }
 
+
     hwlib::cout << "Current humidity = " << dht11.humidity << "%" << hwlib::endl;
 
-    hwlib::cout << "Current temperature = " << dht11.temperature << " degrees Celcius" << hwlib::endl;
+    hwlib::cout << "Current temperature = " << dht11.temperature_c << " degrees Celcius" << hwlib::endl;
 
-    hwlib::wait_ms(2000);
+    hwlib::wait_ms(1000);
 
     hwlib::cout << "\n"
 	            << "Fresh data below:" 
