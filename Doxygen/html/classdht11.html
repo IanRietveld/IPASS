@@ -82,15 +82,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8294ec8e19e115fb9b24a6716f9a51df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a8294ec8e19e115fb9b24a6716f9a51df">get_data</a> ()</td></tr>
 <tr class="memdesc:a8294ec8e19e115fb9b24a6716f9a51df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read five bytes send by the sensor.  <a href="classdht11.html#a8294ec8e19e115fb9b24a6716f9a51df">More...</a><br /></td></tr>
 <tr class="separator:a8294ec8e19e115fb9b24a6716f9a51df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587543ef45cbc7f0ceb02c3214549ffc"><td class="memItemLeft" align="right" valign="top"><a id="a587543ef45cbc7f0ceb02c3214549ffc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a587543ef45cbc7f0ceb02c3214549ffc">get_temperature</a> ()</td></tr>
+<tr class="memdesc:a587543ef45cbc7f0ceb02c3214549ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to get temperature in either fahrenheit or celcius. <br /></td></tr>
+<tr class="separator:a587543ef45cbc7f0ceb02c3214549ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404f15a283128950a0aa5ef689e775f8"><td class="memItemLeft" align="right" valign="top"><a id="a404f15a283128950a0aa5ef689e775f8"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a404f15a283128950a0aa5ef689e775f8">get_temperature_scale</a> ()</td></tr>
+<tr class="memdesc:a404f15a283128950a0aa5ef689e775f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to set string to right scale. <br /></td></tr>
+<tr class="separator:a404f15a283128950a0aa5ef689e775f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a23e9094d4246dfe568c387360881c"><td class="memItemLeft" align="right" valign="top"><a id="a49a23e9094d4246dfe568c387360881c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdht11.html#a49a23e9094d4246dfe568c387360881c">set_fahrenheit</a> (bool F)</td></tr>
+<tr class="memdesc:a49a23e9094d4246dfe568c387360881c"><td class="mdescLeft">&#160;</td><td class="mdescRight">boolean function to set wether u want to use fahrenheit or celcius. <br /></td></tr>
+<tr class="separator:a49a23e9094d4246dfe568c387360881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afea115bd8e35ed22f9897dd076bbaa6c"><td class="memItemLeft" align="right" valign="top"><a id="afea115bd8e35ed22f9897dd076bbaa6c"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>humidity</b></td></tr>
 <tr class="separator:afea115bd8e35ed22f9897dd076bbaa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bfb1a0a72f3a63329265667293e85ed"><td class="memItemLeft" align="right" valign="top"><a id="a2bfb1a0a72f3a63329265667293e85ed"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>temperature</b></td></tr>
-<tr class="separator:a2bfb1a0a72f3a63329265667293e85ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d370fc65aa0727b6c5dbead5c248ea4"><td class="memItemLeft" align="right" valign="top"><a id="a6d370fc65aa0727b6c5dbead5c248ea4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>temperature_f</b></td></tr>
+<tr class="separator:a6d370fc65aa0727b6c5dbead5c248ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa30268c7ccbbdf0bb56cd5fe0d1d09e"><td class="memItemLeft" align="right" valign="top"><a id="afa30268c7ccbbdf0bb56cd5fe0d1d09e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>temperature_c</b></td></tr>
+<tr class="separator:afa30268c7ccbbdf0bb56cd5fe0d1d09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8294ec8e19e115fb9b24a6716f9a51df"></a>
@@ -146,7 +161,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>temperature</b></td></
 </div><div class="memdoc">
 
 <p>Function to read one byte from DHT11. </p>
-<p>This functions purpose is to read one byte from the sensor and saving it into the result variabel, details are described in commentary. </p>
+<p>This functions purpose is to read one byte from the sensor and saving it into the result variabel. </p>
 
 </div>
 </div>

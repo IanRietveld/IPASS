@@ -9,15 +9,27 @@
 uint8\+\_\+t \mbox{\hyperlink{classdht11_a6a15bf65b7739007d507633daed4dce3}{read\+\_\+dht11\+\_\+byte}} ()
 \begin{DoxyCompactList}\small\item\em Function to read one byte from DHT11. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdht11_a8294ec8e19e115fb9b24a6716f9a51df}{get\+\_\+data}} ()
-\begin{DoxyCompactList}\small\item\em Read five bytes send by the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read five bytes send by the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdht11_a587543ef45cbc7f0ceb02c3214549ffc}\label{classdht11_a587543ef45cbc7f0ceb02c3214549ffc}} 
+int \mbox{\hyperlink{classdht11_a587543ef45cbc7f0ceb02c3214549ffc}{get\+\_\+temperature}} ()
+\begin{DoxyCompactList}\small\item\em function to get temperature in either fahrenheit or celcius. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdht11_a404f15a283128950a0aa5ef689e775f8}\label{classdht11_a404f15a283128950a0aa5ef689e775f8}} 
+const char $\ast$ \mbox{\hyperlink{classdht11_a404f15a283128950a0aa5ef689e775f8}{get\+\_\+temperature\+\_\+scale}} ()
+\begin{DoxyCompactList}\small\item\em function to set string to right scale. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdht11_a49a23e9094d4246dfe568c387360881c}\label{classdht11_a49a23e9094d4246dfe568c387360881c}} 
+void \mbox{\hyperlink{classdht11_a49a23e9094d4246dfe568c387360881c}{set\+\_\+fahrenheit}} (bool F)
+\begin{DoxyCompactList}\small\item\em boolean function to set wether u want to use fahrenheit or celcius. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classdht11_afea115bd8e35ed22f9897dd076bbaa6c}\label{classdht11_afea115bd8e35ed22f9897dd076bbaa6c}} 
 int {\bfseries humidity}
 \item 
-\mbox{\Hypertarget{classdht11_a2bfb1a0a72f3a63329265667293e85ed}\label{classdht11_a2bfb1a0a72f3a63329265667293e85ed}} 
-int {\bfseries temperature}
+\mbox{\Hypertarget{classdht11_a6d370fc65aa0727b6c5dbead5c248ea4}\label{classdht11_a6d370fc65aa0727b6c5dbead5c248ea4}} 
+int {\bfseries temperature\+\_\+f}
+\item 
+\mbox{\Hypertarget{classdht11_afa30268c7ccbbdf0bb56cd5fe0d1d09e}\label{classdht11_afa30268c7ccbbdf0bb56cd5fe0d1d09e}} 
+int {\bfseries temperature\+\_\+c}
 \end{DoxyCompactItemize}
 
 
@@ -43,7 +55,7 @@ Function to read the 5 bytes sent by the sensor of which the first (integral RH 
 
 Function to read one byte from DHT11. 
 
-This functions purpose is to read one byte from the sensor and saving it into the result variabel, details are described in commentary. 
+This functions purpose is to read one byte from the sensor and saving it into the result variabel. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

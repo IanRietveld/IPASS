@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['read_5fdht11_5fbyte_8',['read_dht11_byte',['../classdht11.html#a6a15bf65b7739007d507633daed4dce3',1,'dht11']]]
+  ['read_5fdht11_5fbyte_13',['read_dht11_byte',['../classdht11.html#a6a15bf65b7739007d507633daed4dce3',1,'dht11']]]
 ];
